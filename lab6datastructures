@@ -1,0 +1,61 @@
+# Creating a list of devices
+devices = ["Router", "Firewall", "Server", "Switch"]
+print(devices)
+
+# Accessing items
+print("First device:", devices[0])
+
+# Modifying items
+devices[2] = "Database Server"
+print("Updated devices:", devices)
+
+# Looping through the list
+for device in devices:
+    print("Checking device:", device)
+
+    # Adding items
+devices.append("Workstation")
+print("After adding:", devices)
+
+# Removing items
+devices.remove("Firewall")
+print("After removing:", devices)
+
+# Creating a dictionary for a user
+user = {
+    "username": "alice",
+    "role": "analyst",
+    "access_level": 2
+}
+print(user)
+
+# Accessing values
+print("Username:", user["username"])
+
+# Modifying values
+user["access_level"] = 3
+print("Updated access level:", user["access_level"])
+
+# Looping through keys and values
+for key, value in user.items():
+    print(key + ":", value)
+
+    # List of users
+users = [
+    {"username": "alice", "role": "analyst", "access_level": 2},
+    {"username": "bob", "role": "admin", "access_level": 5},
+    {"username": "charlie", "role": "intern", "access_level": 1}
+]
+
+# Display all users
+for user in users:
+    print(user["username"], "-", user["role"], "- Level", user["access_level"])
+
+# Update access level for bob
+for user in users:
+    if user["username"] == "bob":
+        user["access_level"] = 6
+
+print("\nUpdated users:")
+for user in users:
+    print(user["username"], "-", user["role"], "- Level", user["access_level"])
